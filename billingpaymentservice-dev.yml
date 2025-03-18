@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:postgresql://pg-1:5433/postgres"
+    url: "jdbc:postgresql://pg-2:5433/postgres"
     username: postgres
     password: test
   jpa:
@@ -22,7 +22,7 @@ spring:
       kafka:
         binder: 
           brokers: kafka:9092
-          
+
 server:
   port: 8085
 
