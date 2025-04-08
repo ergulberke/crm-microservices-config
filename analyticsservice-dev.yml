@@ -60,6 +60,3 @@ eureka:
   instance:
     prefer-ip-address: true
 
-analytics:
-  reporting:
-    cron: "0 0 0 * * *" 
