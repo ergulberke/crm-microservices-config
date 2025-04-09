@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:postgresql://pg-3:5434/postgres"
+    url: "jdbc:postgresql://pg-3:5434/plan-service"
     username: postgres
     password: test
   jpa:
@@ -16,7 +16,7 @@ spring:
       function:
         definition: planFunction
       bindings:
-        billingPaymentFunction-out-0:
+        planFunction-out-0:
           destination: plan-topic
           content-type: application/json
       kafka:
