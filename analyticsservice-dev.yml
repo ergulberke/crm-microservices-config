@@ -2,7 +2,7 @@ spring:
   application:
     name: analytics-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/analytics_service
+    url: jdbc:postgresql://pg-analytics-service:5432/analytics_service
     username: postgres
     password: test
   jpa:
@@ -41,7 +41,7 @@ spring:
         
       kafka:
         binder:
-          brokers: localhost
+          brokers: kafka
           defaultBrokerPort: 9092
           configuration:
             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
