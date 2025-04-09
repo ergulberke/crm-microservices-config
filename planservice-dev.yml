@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://pg-3:5434/postgres"
+    username: postgres
+    password: test
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    showSql: true
+    hibernate:
+      ddlAuto: update
+  cloud:   # notification ile async iletişim
+    stream:
+      defaultBinder: kafka
+      function:
+        definition: planFunction
+      bindings:
+        billingPaymentFunction-out-0:
+          destination: plan-topic
+          content-type: application/json
+      kafka:
+        binder: 
+          brokers: kafka:9092
+
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://eureka:8888/eureka/"
+    register-with-eureka: true
+    fetch-registry: true
