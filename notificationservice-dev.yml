@@ -24,6 +24,7 @@ spring:
     mongodb:
       uri: mongodb://root:root@mongo:27017/notification-service?authSource=admin
 
+
 server:
   port: 8088
 

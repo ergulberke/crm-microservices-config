@@ -19,10 +19,12 @@ spring:
             auto-offset-reset: earliest
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: kafka:9092
+
   data:
     mongodb:
-      uri: mongodb://root:root@localhost:27017/notification-service?authSource=admin
+      uri: mongodb://root:root@mongo:27017/notification-service?authSource=admin
+
 
 server:
   port: 8088
