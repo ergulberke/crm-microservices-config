@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: notification-service
   cloud:
     function:
       definition: billingPaymentFunction;userCreatedEventConsumer
