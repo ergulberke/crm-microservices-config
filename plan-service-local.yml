@@ -10,14 +10,20 @@ spring:
     showSql: true
     hibernate:
       ddlAuto: update
-  cloud:   # notification ile async iletişim
+  cloud:   
     stream:
       defaultBinder: kafka
       function:
-        definition: planFunction
+        definition: planCreated;planUpdated;planDeleted
       bindings:
-        planFunction-out-0:
-          destination: plan-topic
+        planCreated-out-0:
+          destination: plan-created-topic
+          content-type: application/json
+        planUpdated-out-0:
+          destination: plan-updated-topic
+          content-type: application/json
+        planDeleted-out-0:
+          destination: plan-deleted-topic
           content-type: application/json
       kafka:
         binder: 
