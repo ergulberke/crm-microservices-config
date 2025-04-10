@@ -1,12 +1,7 @@
-server:
-  port: 8081
-
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5435/userservice
-    username: postgres
-    password: test 
     driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,15 +14,11 @@ spring:
           time_zone: UTC
     open-in-view: false
 
-  kafka:
-    bootstrap-servers: localhost:9092
-
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://discovery-server:8888/eureka
     fetch-registry: true
     register-with-eureka: true
+
   instance:
     instance-id: ${spring.application.name}:${server.port}
     hostname: localhost
@@ -36,6 +27,4 @@ eureka:
 
 logging:
   level:
-    org:
-      springframework:
-        security: TRACE
+    org.springframework.security: TRACE
