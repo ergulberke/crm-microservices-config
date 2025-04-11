@@ -22,6 +22,6 @@ eureka:
     register-with-eureka: true
   instance:
     instance-id: ${spring.application.name}:${server.port}
-    hostname: localhost
+    hostname: contract-service
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 30
