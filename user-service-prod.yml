@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://user-db-prod:5432/userservice
+    username: produser
+    password: prodpass
+
+  kafka:
+    bootstrap-servers: kafka-prod:9092
+
+logging:
+  level:
+    root: INFO

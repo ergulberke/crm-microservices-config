@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://user-db-dev:5432/userservice
+    username: devuser
+    password: devpass
+
+  kafka:
+    bootstrap-servers: kafka-dev:9092

@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/userservice
+    username: postgres
+    password: test
+
+  kafka:
+    bootstrap-servers: localhost:9092
