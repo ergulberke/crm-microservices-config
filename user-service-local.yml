@@ -3,9 +3,16 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5435/userservice
+    url: jdbc:postgresql://localhost:5432/userservice
     username: postgres
     password: test
 
   kafka:
     bootstrap-servers: localhost:9092
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://discovery-server:8888/eureka/"
+    register-with-eureka: true
+    fetch-registry: true

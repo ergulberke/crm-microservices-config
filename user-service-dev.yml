@@ -9,3 +9,10 @@ spring:
 
   kafka:
     bootstrap-servers: kafka-dev:9092
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://discovery-server:8888/eureka/"
+    register-with-eureka: true
+    fetch-registry: true
