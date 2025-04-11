@@ -2,7 +2,7 @@ spring:
   application:
     name: customer-support-service
   datasource:
-    url: jdbc:postgresql://pg-customer-support-service:5437/customer-support
+    url: jdbc:postgresql://pg-customer-support-service:5432/customer-support
     username: postgres
     password: test
   jpa:
