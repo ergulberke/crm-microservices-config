@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:postgresql://pg-service:5432/billing-payment-service"
+    url: "jdbc:postgresql://pg-2:5432/billing-payment-service"
     username: postgres
     password: test
   jpa:
