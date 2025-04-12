@@ -19,9 +19,14 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: "http://discovery-server:8888/eureka/"
+      defaultZone: http://discovery-server:8888/eureka
+    fetch-registry: true
+    register-with-eureka: true
   instance:
+    instance-id: ${spring.application.name}:${server.port}
+    hostname: contract-service
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
 
 t2:
   security:
