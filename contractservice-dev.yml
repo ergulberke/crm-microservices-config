@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://pg-2:5432/contract-service
+    url: jdbc:postgresql://pg-contract-service:5432/contract-service
     username: postgres
     password: test
     driver-class-name: org.postgresql.Driver
