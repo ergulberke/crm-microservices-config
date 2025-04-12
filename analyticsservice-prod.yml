@@ -2,7 +2,7 @@ kaspring:
   application:
     name: analytics-service
   datasource:
-    url: jdbc:postgresql://pg-analytics-service:5432/analytics_service
+    url: jdbc:postgresql://posgtres-service:5432/analytics_service
     username: postgres
     password: test
   jpa:
