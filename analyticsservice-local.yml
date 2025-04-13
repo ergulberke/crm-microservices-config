@@ -2,7 +2,7 @@ spring:
   application:
     name: analyticsservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/analytics_service
+    url: jdbc:postgresql://pg-analytics-service:5432/analytics_service
     username: postgres
     password: test
   jpa:
