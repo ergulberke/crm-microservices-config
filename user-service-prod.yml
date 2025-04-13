@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://user-db-prod:5432/userservice
+    url: jdbc:postgresql://pg-user-service:5432/userservice
     username: produser
     password: prodpass
 
