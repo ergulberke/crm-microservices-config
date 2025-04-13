@@ -43,3 +43,10 @@ eureka:
     hostname: config-server
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 30
+
+contract:
+  service:
+    url: http://contract-service:8083
+customer:
+  service:
+    url: http://customer-service:8082
