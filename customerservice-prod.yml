@@ -43,8 +43,8 @@ eureka:
 
 plan:
   service:
-    url: http://localhost:8084
+    url: http://plan-service:8084
 
 contract:
   service:
-    url: http://localhost:8083
+    url: http://contract-service:8083
