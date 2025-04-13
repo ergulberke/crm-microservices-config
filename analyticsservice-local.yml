@@ -1,6 +1,6 @@
 spring:
   application:
-    name: analytics-service
+    name: analyticsservice
   datasource:
     url: jdbc:postgresql://localhost:5432/analytics_service
     username: postgres
