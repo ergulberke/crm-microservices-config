@@ -1,0 +1,11 @@
+spring:
+  port: 8084
+  application:
+    name: plan-service
+  config:
+    import: configserver:http://config-server:8089
+  profiles:
+    active: local
+  cloud:
+    config:
+      profile: local
