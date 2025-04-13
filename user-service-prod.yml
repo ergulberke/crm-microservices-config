@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://pg-user-service:5432/userservice
-    username: produser
-    password: prodpass
+    username: postgres
+    password: test
 
   kafka:
     bootstrap-servers: kafka-prod:9092
