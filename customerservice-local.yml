@@ -11,10 +11,9 @@ spring:
           content-type: application/json
       kafka:
         binder:
-          brokers: localhost
-          defaultBrokerPort: 9092
+          brokers: kafka:9092  # docker-compose'daki kafka servisi
   datasource:
-    url: "jdbc:mysql://localhost:3306/my_database?useSSL=false&serverTimezone=UTC"
+    url: "jdbc:mysql://mysql:3306/my_database?useSSL=false&serverTimezone=UTC"  # mysql container adı
     username: myuser
     password: test
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -32,19 +31,19 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery-server:8888/eureka
+      defaultZone: http://discovery-server:8888/eureka  # docker-compose'daki eureka servisi
     fetch-registry: true
     register-with-eureka: true
   instance:
     instance-id: ${spring.application.name}:${server.port}
-    hostname: config-server
+    hostname: customer-service  # container adıyla aynı olması önerilir
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 30
 
 plan:
   service:
-    url: http://localhost:8084
+    url: http://plan-service:8084
 
 contract:
   service:
-    url: http://localhost:8083
+    url: http://contract-service:8083
