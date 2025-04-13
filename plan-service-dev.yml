@@ -38,3 +38,10 @@ eureka:
       defaultZone: "http://eureka:8888/eureka/"
     register-with-eureka: true
     fetch-registry: true
+
+contract:
+  service:
+    url: http://contract-service:8083
+customer:
+  service:
+    url: http://customer-service:8082
