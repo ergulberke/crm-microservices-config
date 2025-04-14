@@ -8,7 +8,7 @@ spring:
     password: test
 
   kafka:
-    bootstrap-servers: kafka-prod:9092
+    bootstrap-servers: kafka:9092
 
 logging:
   level:
