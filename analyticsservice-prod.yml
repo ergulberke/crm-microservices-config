@@ -41,7 +41,7 @@ kaspring:
         
       kafka:
         binder:
-          brokers: kafka-service
+          brokers: kafka
           defaultBrokerPort: 9092
           configuration:
             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
